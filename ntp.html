@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Notice to Proceed (NTP) — Cell Tower</title>
+  <style>
+    :root{
+      --accent:#1b4f72;
+      --muted:#666;
+      --card-bg:#fff;
+      --page-bg:#f4f6f8;
+      --max-width:900px;
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    body{
+      background:var(--page-bg);
+      margin:20px;
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+    }
+    .container{
+      max-width:var(--max-width);
+      margin:0 auto;
+      background:var(--card-bg);
+      padding:28px;
+      border-radius:10px;
+      box-shadow:0 6px 20px rgba(20,30,40,0.08);
+    }
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      margin-bottom:18px;
+    }
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .logo{
+      width:64px;
+      height:64px;
+      background:linear-gradient(135deg,var(--accent),#2a8ccf);
+      border-radius:8px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-weight:700;
+      box-shadow:0 2px 6px rgba(11,30,50,0.12);
+    }
+    h1{ font-size:20px; margin:0; }
+    .meta{ text-align:right; color:var(--muted); font-size:13px; }
+    section{ margin-top:12px; }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    .field{
+      background:#fbfdff;
+      padding:12px;
+      border-radius:8px;
+      border:1px solid #eef3f6;
+    }
+    .field h3{ margin:0 0 6px 0; font-size:13px; color:var(--accent); }
+    .field p{ margin:0; color:var(--muted); font-size:14px; }
+    .full{ grid-column: 1 / -1; }
+    .notes{ white-space:pre-wrap; color:#222; font-size:14px; }
+    .signature-row{
+      display:flex;
+      gap:18px;
+      margin-top:18px;
+      align-items:flex-end;
+    }
+    .signature{
+      flex:1;
+      padding-top:12px;
+      border-top:1px dashed #c8d6df;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+    }
+    footer{
+      margin-top:20px;
+      font-size:12px;
+      color:var(--muted);
+      border-top:1px solid #eef3f6;
+      padding-top:10px;
+    }
+
+    /* Print adjustments */
+    @media print{
+      body{ background:#fff; margin:0; }
+      .container{ box-shadow:none; border-radius:0; padding:8mm; }
+      .logo{ width:56px; height:56px; }
+      .meta{ text-align:right; font-size:12px; }
+    }
+
+    /* Small screens */
+    @media (max-width:640px){
+      .grid{ grid-template-columns: 1fr; }
+      header{ flex-direction:column; align-items:flex-start; }
+      .meta{ text-align:left; width:100%; }
+    }
+
+    /* helper for editable placeholders */
+    .editable{ color:#0b2b44; font-weight:600; }
+  </style>
+</head>
+<body>
+  <div class="container" role="document" aria-label="Notice to Proceed">
+    <header>
+      <div class="brand">
+        <div class="logo">CT</div>
+        <div>
+          <h1>Notice to Proceed (NTP)</h1>
+          <div style="font-size:13px; color:var(--muted)">Cell Tower / Site Construction</div>
+        </div>
+      </div>
+      <div class="meta">
+        <div>Document #: <span class="editable">NTP-2025-1015</span></div>
+        <div>Issue Date: <span class="editable">October 15, 2025</span></div>
+      </div>
+    </header>
+
+    <section class="grid">
+      <div class="field">
+        <h3>Project / Contractor</h3>
+        <p><strong>Contractor:</strong> <span class="editable">Tower Top Services, LLC</span><br>
+           <strong>Contract No.:</strong> <span class="editable">EST-989-274-1022</span></p>
+      </div>
+
+      <div class="field">
+        <h3>Owner / Client</h3>
+        <p><strong>Tower Owner:</strong> <span class="editable">Crown Castel</span><br>
+           <strong>Project Manager:</strong> <span class="editable">Rob Garlander</span></p>
+      </div>
+
+      <div class="field full">
+        <h3>Site Identification</h3>
+        <p><strong>Site ID:</strong> <span class="editable">1019452</span> &nbsp;&nbsp;
+           <strong>Lease / Cell ID:</strong> <span class="editable">LC-6789</span></p>
+        <p><strong>Site Address / Location:</strong> <span class="editable">11800 Lemen Road Whitemore Lake </span></p>
+        <p><strong>Coordinates:</strong> <span class="editable"></span></p>
+      </div>
+
+      <div class="field">
+        <h3>Scope of Work</h3>
+        <p class="notes editable">Install new RRU's and feedlines; replace antenna sector A; install grounding upgrades; perform RF testing.</p>
+      </div>
+
+      <div class="field">
+        <h3>Work Window</h3>
+        <p><strong>Commence Work (Start Date):</strong> <span class="editable">October 20, 2025</span><br>
+           <strong>Completion Date (Estimated):</strong> <span class="editable">December 15, 2025</span></p>
+      </div>
+
+      <div class="field">
+        <h3>Access & Site Conditions</h3>
+        <p class="notes editable">Contractor shall notify site manager 72 hours prior to mobilization. Access via Gate B. All work must comply with local site rules and ROW. No overnight laydown without prior approval.</p>
+      </div>
+
+      <div class="field">
+        <h3>Safety & Insurance</h3>
+        <p class="notes editable">Contractor shall maintain valid insurance per contract: General Liability, Workers Comp, Auto, and provide safety plan and JSA prior to entry. All personnel must have site orientation and PPE (hard hat, harness, fall arrest).</p>
+      </div>
+
+      <div class="field full">
+        <h3>Special Conditions / Constraints</h3>
+        <p class="notes editable">Work is limited to weekdays 07:00–17:00. Noise restrictions after 15:00. Any structural changes to be verified by PE. Contractor responsible for any damages to existing equipment. Contractor must coordinate with carriers on site to avoid service disruption.</p>
+      </div>
+    </section>
+
+    <section>
+      <h3 style="color:var(--accent); margin-bottom:8px;">Authorization</h3>
+      <p class="notes">By signing below, the Owner/Authorized Representative issues this Notice to Proceed to the Contractor for the described scope. Contractor accepts the Notice to Proceed, confirms required insurances, permits, and safety plans are in place, and will begin work on the start date above unless otherwise notified in writing.</p>
+
+      <div class="signature-row">
+        <div>
+          <div class="signature">
+            Owner / Authorized Representative<br><br>
+            <strong><span class="editable">Jordan Smith</span></strong><br>
+            Title: <span class="editable">Senior Project Manager</span><br>
+            Date: <span class="editable">__________</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="signature">
+            Contractor Representative<br><br>
+            <strong><span class="editable">Alex Rivera</span></strong><br>
+            Title: <span class="editable">Field Operations Manager</span><br>
+            Date: <span class="editable">__________</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div><strong>Notes:</strong> Keep a signed copy on file at the site and with corporate project records. This NTP does not supersede the master contract. Any changes to scope/dates require a written change order.</div>
+    </footer>
+  </div>
+</body>
+</html>

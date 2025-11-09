@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Portal Login - Tower Top Services</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(135deg, #f4f4f4 0%, #e0e9f0 100%);
+        }
+
+        .login-page {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .brand-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .brand-header h1 {
+            color: #003a57;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .brand-header p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .back-to-home {
+            display: inline-block;
+            margin-top: 20px;
+            color: #0077b6;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-to-home:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <main class="login-page">
+        <div class="login-container">
+            <div class="brand-header">
+                <h1>Tower Top Services</h1>
+                <p>Employee Portal Login</p>
+            </div>
+            <form id="login-form" novalidate>
+                <div class="form-row">
+                    <label for="username">Email or Username</label>
+                    <input id="username" name="username" type="text" 
+                           autocomplete="username" required 
+                           aria-required="true">
+                </div>
+
+                <div class="form-row">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" 
+                           autocomplete="current-password" required 
+                           aria-required="true">
+                </div>
+
+                <div class="form-row form-row--actions">
+                    <label class="checkbox">
+                        <input type="checkbox" id="remember" name="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a class="link-small" href="#">Forgot password?</a>
+                </div>
+
+                <div id="login-error" class="login-error" aria-live="polite"></div>
+
+                <div class="form-row">
+                    <button type="submit" class="btn-primary">Sign in</button>
+                    <a class="btn-secondary" href="workOrder.html">Work Orders</a>
+                </div>
+            </form>
+            <a href="index.html" class="back-to-home">← Back to Homepage</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Tower Top Services | All Rights Reserved</p>
+    </footer>
+
+    <script src="login.js" defer></script>
+</body>
+</html>
