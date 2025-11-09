@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+    <style>
+    section {
+      padding: 20px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+  nav {
+      background: #222;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #00aaff;
+    }
+
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    color: #222;
+  }
+
+  header {
+    background: #004466;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  h2 {
+    color: #004466;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #00aaff;
+    padding-bottom: 5px;
+  }
+
+  label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  textarea { resize: vertical; }
+
+  .button {
+    background: #004466;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+
+  .button:hover { background: #0077b6; }
+
+  footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  nav {
+      background: #222;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #00aaff;
+    }
+</style>
+</head>
+
+
+<body>
+    <header>
+        <h1>Tower Top Services</h1>
+        <p>Daily Safty Check-list</p>
+
+        <nav>
+            <a href="index.html">Homepage</a>
+             <a href="jsa.html">JSA</a>
+             <a href="ntp.html">Notice-To-Proceed</a>
+             <a href="workOrder.html">Work Order</a>
+        </nav>
+    </header>
+
+  
+    
+  <label>Project Name: <input type="text"></label><br>
+  <label>Tower Location: <input type="text"></label><br>
+  <label>Job Date: <input type="text"></label><br>
+  <label>Crew Lead: <input type="text"></label><br>
+  <label>Client/Carrier: <input type="text"></label>
+
+  <ul>
+    <li>Inspect and assess tower structure integrity</li>
+    <li>Install / maintain / remove antennas, radios, or cabling</li>
+    <li>Perform sweep or PIM testing</li>
+    <li>Conduct tower mapping/photos</li>
+    <li>Ground system installation or testing</li>
+    <li>Replace or adjust guy wires (if applicable)</li>
+    <li>Cleanup and restore site</li>
+  </ul>
+
+  <h2>Job Safety Analysis (JSA)</h2>
+  <table>
+    <tbody><tr><th>Task</th><th>Potential Hazards</th><th>Controls/Mitigation</th></tr>
+    <tr><td>Site Arrival / Setup</td><td>Uneven terrain, traffic, weather</td><td>Wear hi-vis, assess site, place cones/barriers</td></tr>
+    <tr><td>Climbing Tower</td><td>Falls, dropped tools</td><td>Full-body harness, 100% tie-off, tool lanyards</td></tr>
+    <tr><td>Antenna Work</td><td>Electrical shock, RF exposure</td><td>Lockout/tagout, RF monitoring, PPE</td></tr>
+    <tr><td>Cable Installation</td><td>Cuts, strain injury</td><td>Wear gloves, proper lifting technique</td></tr>
+    <tr><td>Equipment Use</td><td>Pinch/crush, electrical</td><td>Inspect tools daily, proper operation</td></tr>
+    <tr><td>Weather Exposure</td><td>Heat stroke, hypothermia</td><td>Weather gear, hydration, limit exposure</td></tr>
+    <tr><td>Descend / Exit</td><td>Fatigue, equipment failure</td><td>Final inspection, buddy check</td></tr>
+  </tbody></table>
+
+  <h2>Daily Safety Checklist</h2>
+  <h3>Crew Readiness</h3>
+  <ul>
+    <li><input type="checkbox"> All crew members are trained and certified</li>
+    <li><input type="checkbox"> Toolbox talk conducted</li>
+    <li><input type="checkbox"> Job briefing completed and signed</li>
+    <li><input type="checkbox"> Emergency plan reviewed</li>
+  </ul>
+
+  <h3>PPE Checklist</h3>
+  <ul>
+    <li><input type="checkbox"> Hard hat</li>
+    <li><input type="checkbox"> Safety glasses</li>
+    <li><input type="checkbox"> Climbing harness (inspected)</li>
+    <li><input type="checkbox"> Lanyards and connectors</li>
+    <li><input type="checkbox"> Gloves</li>
+    <li><input type="checkbox"> Hi-vis vest/shirt</li>
+    <li><input type="checkbox"> Steel-toe boots</li>
+    <li><input type="checkbox"> RF monitor</li>
+  </ul>
+
+  <h3>Climbing / Rigging</h3>
+  <ul>
+    <li><input type="checkbox"> Tower inspected before climbing</li>
+    <li><input type="checkbox"> Anchor points verified</li>
+    <li><input type="checkbox"> 100% tie-off enforced</li>
+    <li><input type="checkbox"> Equipment hoisted safely</li>
+    <li><input type="checkbox"> Tools tethered</li>
+    <li><input type="checkbox"> Weather conditions checked</li>
+  </ul>
+
+  <h3>Electrical / RF</h3>
+  <ul>
+    <li><input type="checkbox"> Power confirmed off (LOTO if applicable)</li>
+    <li><input type="checkbox"> RF hazard zones identified and marked</li>
+    <li><input type="checkbox"> Monitoring devices active</li>
+  </ul>
+
+  <h3>Site and Environmental</h3>
+  <ul>
+    <li><input type="checkbox"> Barricades or cones placed</li>
+    <li><input type="checkbox"> First aid kit on site</li>
+    <li><input type="checkbox"> Fire extinguisher available</li>
+    <li><input type="checkbox"> Wildlife/pests checked</li>
+    <li><input type="checkbox"> Trash and debris cleared</li>
+  </ul>
+
+  <h2>Sign-Off Sheet</h2>
+  <table>
+    <tbody><tr><th>Crew Member</th><th>Role</th><th>Signature</th><th>Date</th></tr>
+    <tr>
+      <td><input id="name1" type="text"></td>
+      <td><input id="role1" type="text"></td>
+      <td><input id="sig1" type="text" readonly=""></td>
+      <td><input id="date1" type="text" readonly=""></td>
+    </tr>
+    <tr>
+      <td><input id="name2" type="text"></td>
+      <td><input id="role2" type="text"></td>
+      <td><input id="sig2" type="text" readonly=""></td>
+      <td><input id="date2" type="text" readonly=""></td>
+    </tr>
+    <tr>
+      <td><input id="name3" type="text"></td>
+      <td><input id="role3" type="text"></td>
+      <td><input id="sig3" type="text" readonly=""></td>
+      <td><input id="date3" type="text" readonly=""></td>
+    </tr>
+  </tbody></table>
+  <button class="button" onclick="updateSignature(1); updateSignature(2); updateSignature(3);">Sign</button>
+
+  <p><strong>Supervisor Sign-Off:</strong> <input type="text"></p>
+  <p><strong>Date:</strong> <input type="text"></p>
+
+    </body>
+</html>
