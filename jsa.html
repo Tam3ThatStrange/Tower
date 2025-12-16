@@ -136,78 +136,52 @@
 
       <div class="form-section">
         <label for="task">Task Description</label>
-        <textarea id="task" name="task" rows="3" placeholder="Describe work being performed (e.g., L&A install, tower mod, etc.)"></textarea>
+        <textarea id="task" name="task" rows="3" placeholder="Tower Sight Photos,  Identify unused or abandon equiptment, Inspect all equipment is install properly following all guidlines"></textarea>
 
         <label for="hazards">Identified Hazards</label>
-        <textarea id="hazards" name="hazards" rows="3" placeholder="List potential hazards (e.g., fall risk, RF exposure, weather)"></textarea>
+        <textarea id="hazards" name="hazards" rows="3" placeholder="Slips & Trips , fall risk, RF exposure, weather"></textarea>
 
         <label for="controls">Safety Controls</label>
-        <textarea id="controls" name="controls" rows="3" placeholder="Describe control measures (e.g., tie-off 100%, PPE, RF lockout)"></textarea>
+        <textarea id="controls" name="control4701 James p cole blvd Flint Mi 48505s" rows="3" placeholder="Identify hazard areas place cones if needed, rf monitor, keep work area clean, gloves and proper ppe"></textarea>
       </div>
 
       <div class="form-section">
         <label for="ppe">Required PPE</label>
-        <textarea id="ppe" name="ppe" rows="2" placeholder="Hard hat, harness, gloves, safety glasses, etc."></textarea>
+        <textarea id="ppe" name="ppe" rows="2" placeholder="Hard hat, harness, gloves, safety glasses, Boots, Y-Lanyards"></textarea>
 
         <label for="signoff">Crew Sign-off</label>
         <textarea id="signoff" name="signoff" rows="2" placeholder="Each member acknowledges JSA briefing"></textarea>
       </div>
 
-      <button type="button" class="button" onclick="window.print()">Print JSA Form</button>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;align-items:center;">
+        <input id="jsaSaveName" type="text" placeholder="Save as (optional)" style="flex:1;min-width:200px;padding:8px;border-radius:6px;border:1px solid #ccc;">
+        <button id="jsaSaveBtn" type="button" class="button">Save JSA</button>
+        <button type="button" class="button" onclick="window.print()">Print JSA Form</button>
+      </div>
     </form>
   </section>
 
-  <!-- WORK ORDER FORM -->
-  <section>
-    <h2>Work Order Form</h2>
-    <form id="workOrderForm">
-      <div class="form-section">
-        <label for="woNumber">Work Order Number</label>
-        <input type="text" id="woNumber" name="woNumber" placeholder="WO-0001">
-
-        <label for="carrier">Carrier</label>
-        <select id="carrier" name="carrier">
-          <option value="">Select Carrier</option>
-          <option value="T-Mobile">T-Mobile</option>
-          <option value="Verizon">Verizon</option>
-          <option value="AT&T">AT&T</option>
-          <option value="Other">Other</option>
-        </select>
-
-        <label for="siteName">Site Name / ID</label>
-        <input type="text" id="siteName" name="siteName" placeholder="Example: MI1234 / Grand Rapids Tower">
-      </div>
-
-      <div class="form-section">
-        <label for="scope">Scope of Work</label>
-        <textarea id="scope" name="scope" rows="3" placeholder="Describe work (e.g., install antennas, run coax, integrate sector)"></textarea>
-
-        <label for="materials">Materials Used</label>
-        <textarea id="materials" name="materials" rows="2" placeholder="List materials or equipment used"></textarea>
-
-        <label for="completion">Completion Notes</label>
-        <textarea id="completion" name="completion" rows="3" placeholder="Add final notes, testing, or sign-off comments"></textarea>
-      </div>
-
-      <div class="form-section">
-        <label for="tech">Lead Technician</label>
-        <input type="text" id="tech" name="tech">
-
-        <label for="signature">Signature</label>
-        <input type="text" id="signature" name="signature" placeholder="Type name for digital signature">
-
-        <label for="completed">Date Completed</label>
-        <input type="date" id="completed" name="completed">
-      </div>
-
-      <button type="button" class="button" onclick="window.print()">Print Work Order</button>
-    </form>
+  <section style="margin-top:22px;">
+    <h2>Saved JSAs</h2>
+    <div id="savedJsaList">No saved JSAs.</div>
   </section>
+
+  <!-- Simple modal for viewing saved JSA -->
+  <div id="jsaViewModal" style="display:none;position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.6);align-items:center;justify-content:center;">
+    <div style="background:white;max-width:900px;margin:auto;padding:20px;border-radius:8px;max-height:90vh;overflow:auto;">
+      <button id="jsaCloseModal" style="float:right;margin-bottom:10px;">Close</button>
+      <pre id="jsaModalContent" style="white-space:pre-wrap;word-wrap:break-word;"></pre>
+    </div>
+  </div>
+
+
 </main>
 
 <footer>
   © 2025 Tower Top Services | info@towertopservices.com
 </footer>
+
+<script src="jsa.js"></script>
 
 </body>
 </html>
